@@ -24,7 +24,7 @@ class App extends Component {
   render() {
     const messages  = this.state;
     return <div className="App">
-        <ul>
+        <ul className="No-Bullet">
           { messages.members.map(
               p => <li key={p.id}>{p.name}</li>
             )
