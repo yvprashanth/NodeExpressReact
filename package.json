@@ -4,12 +4,21 @@
   "scripts": {
     "client": "cd client && yarn start",
     "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "start": "cd server && node ./bin/www"
   },
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+      "body-parser": "~1.15.2",
+      "cookie-parser": "~1.4.3",
+      "debug": "~2.2.0",
+      "express": "~4.14.0",
+      "hbs": "~4.0.1",
+      "morgan": "~1.7.0",
+      "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
     "concurrently": "^3.5.0"
-  }
+  },
+  "heroku-postbuild": "cd client && npm install && npm run build"
 }
