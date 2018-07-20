@@ -5,7 +5,8 @@
     "client": "cd client && yarn start",
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "start": "concurrently \"cd client && PORT=3000 yarn start\" \"cd server && PORT=4000 yarn start\""
+    
+    "start": "cd server && node ./bin/www"
   },
   "dependencies": {
     "express": "~4.14.0",
