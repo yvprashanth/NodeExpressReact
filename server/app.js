@@ -29,7 +29,7 @@ app.use('/api', api);
 
 // All remaining requests return the React app, so it can handle routing.
 app.get('*', function (request, response) {
-  response.sendFile(path.resolve(__dirname, '../react-ui/build', 'index.html'));
+  response.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 
 
